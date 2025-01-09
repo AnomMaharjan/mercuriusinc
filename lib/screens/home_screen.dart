@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:intl/intl.dart';
 import 'package:mercuriusinc/model/employee_status.dart';
 import 'package:mercuriusinc/widgets/calendar.dart';
@@ -33,8 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
       _isLoading = true;
     });
     try {
-      var data = await http.get(Uri.parse(
-          "http://3.13.254.87:2020/basicwatchshiftdetails/100/2025-01-09"));
+      var data = await http.get(Uri.parse(dotenv.env["BASE_URL"]!));
       if (data.statusCode == 200) {
         employeeStatus = EmployeeStatus.fromJson(jsonDecode(data.body)[0]);
       }
