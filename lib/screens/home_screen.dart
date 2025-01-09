@@ -8,7 +8,7 @@ import 'package:mercuriusinc/widgets/calendar.dart';
 import 'package:mercuriusinc/widgets/custom_appbar.dart';
 import 'package:mercuriusinc/widgets/time_card.dart';
 import 'package:http/http.dart' as http;
-import 'widgets/schedule_card.dart';
+import '../widgets/schedule_card.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

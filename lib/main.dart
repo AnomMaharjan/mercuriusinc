@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mercuriusinc/splash_screen.dart';
+import 'package:mercuriusinc/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
